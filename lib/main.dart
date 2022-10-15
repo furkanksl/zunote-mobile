@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sizer/sizer.dart';
+import 'package:zunote/features/auth/presentation/auth_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -9,12 +16,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ZUNOTE',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Sizer(
+      builder: (context, orientation, deviceType) => Listener(
+        onPointerDown: (_) {
+          FocusScopeNode currentFocus = FocusScope.of(context);
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.focusedChild?.unfocus();
+          }
+        },
+        child: const MaterialApp(
+          title: 'ZUNOTE',
+          debugShowCheckedModeBanner: false,
+          home: AuthScreen(),
+        ),
       ),
-      home: Container(),
     );
   }
 }
