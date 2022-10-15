@@ -11,6 +11,10 @@ class AppStyle {
   final passwordIconPath = 'assets/icons/password.svg';
   final playStoreIconPath = 'assets/icons/play-store.svg';
   final appStpreIconPath = 'assets/icons/apple-store.svg';
+  final menuIconPath = 'assets/icons/menu.svg';
+  final closeIconPath = 'assets/icons/close.svg';
+  final aboutIconPath = 'assets/icons/about.svg';
+  final logoutIconPath = 'assets/icons/logout.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330;
