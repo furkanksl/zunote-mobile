@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Expanded(
                   child: Container(
-                    color: Colors.black12,
                     width: 100.w,
                     child: Column(
                       children: [
