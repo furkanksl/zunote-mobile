@@ -4,12 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 final homePageProvider = StateNotifierProvider<HomeProvider, HomeState>((ref) => HomeProvider());
 
 class HomeProvider extends StateNotifier<HomeState> {
-  HomeProvider() : super(HomeState(toggleMenu: false));
+  HomeProvider() : super(HomeState(toggleMenu: false, navIndex: 1));
 
   void setToggle(bool? value) => state = state.copyWith(toggleMenu: value);
-  void setEmail(String emailAddress) => state.email = emailAddress;
-  void setPassword(String pass) => state.password = pass;
-  void setPasswordAgain(String passAgain) => state.passwordAgain = passAgain;
+  void setNavIndex(int index) => state = state.copyWith(navIndex: index);
 
   Future<bool> login() async => false;
   Future<bool> signup() async => false;
@@ -17,28 +15,20 @@ class HomeProvider extends StateNotifier<HomeState> {
 
 class HomeState {
   bool? toggleMenu = false;
-  String? email = "";
-  String? password = "";
-  String? passwordAgain = "";
+  int? navIndex = 1;
 
   HomeState({
     this.toggleMenu,
-    this.email,
-    this.password,
-    this.passwordAgain,
+    this.navIndex,
   });
 
   HomeState copyWith({
     bool? toggleMenu,
-    String? email,
-    String? password,
-    String? passwordAgain,
+    int? navIndex,
   }) {
     return HomeState(
       toggleMenu: toggleMenu ?? this.toggleMenu,
-      email: email ?? this.email,
-      password: password ?? this.password,
-      passwordAgain: passwordAgain ?? this.passwordAgain,
+      navIndex: navIndex ?? this.navIndex,
     );
   }
 }
