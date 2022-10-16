@@ -12,11 +12,13 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
   final GlobalKey<PopupMenuButtonState<int>> popupButtonKey = GlobalKey();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final toggleMenu = ref.watch(homePageProvider).toggleMenu;
+    final toggleMenu = ref.watch(homePageProvider).toggleMenu ?? false;
+
     return AppBar(
       backgroundColor: Color(AppStyle.instance.primaryColor),
       elevation: 0,
@@ -31,82 +33,78 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
       actions: [
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: PopupMenuButton(
-            key: popupButtonKey,
-            padding: EdgeInsets.zero,
-            color: Color(AppStyle.instance.secondaryColor),
-            position: PopupMenuPosition.over,
-            constraints: BoxConstraints(
-              maxWidth: (100.w - 20),
-            ),
-            offset: const Offset(0, 45),
-            splashRadius: 100,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            itemBuilder: (context) {
-              return [
-                PopupMenuItem<int>(
-                  value: 0,
-                  child: SizedBox(
-                    width: (100.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 35,
-                          child: SvgPicture.asset(AppStyle.instance.aboutIconPath),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text("About"),
-                      ],
-                    ),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 1,
-                  child: SizedBox(
-                    width: 100.w,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 35,
-                          child: SvgPicture.asset(AppStyle.instance.logoutIconPath),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text("Logout"),
-                      ],
-                    ),
-                  ),
-                ),
-              ];
-            },
-            child: Container(
-              constraints: const BoxConstraints(maxWidth: 45),
-              width: 20.w,
-              child: GestureDetector(
-                onTap: () {
-                  ref.read(homePageProvider.notifier).setToggle(true);
+          child: GestureDetector(
+            onTap: () async {
+              ref.read(homePageProvider.notifier).setToggle(true);
 
-                  popupButtonKey.currentState?.showButtonMenu();
-                },
+              bool? isClosed = await popupButtonKey.currentState?.showButtonMenu();
+              if (isClosed!) {
+                ref.read(homePageProvider.notifier).setToggle(false);
+              }
+            },
+            child: PopupMenuButton(
+              key: popupButtonKey,
+              padding: EdgeInsets.zero,
+              color: Color(AppStyle.instance.secondaryColor),
+              position: PopupMenuPosition.over,
+              constraints: BoxConstraints(
+                maxWidth: (100.w - 20),
+              ),
+              offset: const Offset(0, 45),
+              splashRadius: 100,
+              enabled: false,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              tooltip: "Menu",
+              itemBuilder: (context) {
+                return [
+                  PopupMenuItem<int>(
+                    value: 0,
+                    child: SizedBox(
+                      width: (100.w),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 35,
+                            child: SvgPicture.asset(AppStyle.instance.aboutIconPath),
+                          ),
+                          const SizedBox(width: 10),
+                          const Text("About"),
+                        ],
+                      ),
+                    ),
+                  ),
+                  PopupMenuItem<int>(
+                    value: 1,
+                    child: SizedBox(
+                      width: 100.w,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 35,
+                            child: SvgPicture.asset(AppStyle.instance.logoutIconPath),
+                          ),
+                          const SizedBox(width: 10),
+                          const Text("Logout"),
+                        ],
+                      ),
+                    ),
+                  ),
+                ];
+              },
+              child: Container(
+                constraints: const BoxConstraints(maxWidth: 45),
+                width: 20.w,
                 child: SvgPicture.asset(
-                  toggleMenu! ? AppStyle.instance.closeIconPath : AppStyle.instance.menuIconPath,
+                  toggleMenu ? AppStyle.instance.closeIconPath : AppStyle.instance.menuIconPath,
                 ),
               ),
             ),
-            onCanceled: () => ref.read(homePageProvider.notifier).setToggle(false),
-            onSelected: (value) {
-              if (value == 0) {
-                print("My account menu is selected.");
-              } else if (value == 1) {
-                print("Settings menu is selected.");
-              }
-              ref.read(homePageProvider.notifier).setToggle(false);
-            },
           ),
         ),
       ],

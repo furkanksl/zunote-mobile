@@ -20,14 +20,14 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final int? navIndex = ref.watch(homePageProvider).navIndex;
+    final int navIndex = ref.watch(homePageProvider).navIndex ?? 1;
 
     return Scaffold(
       backgroundColor: Color(AppStyle.instance.primaryColor),
       bottomNavigationBar: const BottomNavBar(),
       appBar: NavBar(),
       body: SafeArea(
-        child: Center(child: pageList.elementAt(navIndex!)),
+        child: Center(child: pageList.elementAt(navIndex)),
       ),
     );
   }

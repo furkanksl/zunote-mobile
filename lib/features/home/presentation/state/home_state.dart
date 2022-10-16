@@ -1,21 +1,25 @@
 // ignore_for_file: prefer_final_fields
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final homePageProvider = StateNotifierProvider<HomeProvider, HomeState>((ref) => HomeProvider());
+final homePageProvider = StateNotifierProvider<HomeProvider, HomeState>(
+  (ref) => HomeProvider(
+    HomeState(
+      toggleMenu: false,
+      navIndex: 1,
+    ),
+  ),
+);
 
 class HomeProvider extends StateNotifier<HomeState> {
-  HomeProvider() : super(HomeState(toggleMenu: false, navIndex: 1));
+  HomeProvider(HomeState state) : super(state);
 
-  void setToggle(bool? value) => state = state.copyWith(toggleMenu: value);
+  void setToggle(bool value) => state = state.copyWith(toggleMenu: value);
   void setNavIndex(int index) => state = state.copyWith(navIndex: index);
-
-  Future<bool> login() async => false;
-  Future<bool> signup() async => false;
 }
 
 class HomeState {
-  bool? toggleMenu = false;
-  int? navIndex = 1;
+  bool? toggleMenu;
+  int? navIndex;
 
   HomeState({
     this.toggleMenu,
