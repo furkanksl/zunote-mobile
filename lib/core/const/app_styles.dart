@@ -19,6 +19,9 @@ class AppStyle {
   final reminderIconPath = 'assets/icons/reminder.svg';
   final microphoneIconPath = 'assets/icons/microphone.svg';
   final addIconPath = 'assets/icons/add.svg';
+  final zuWordIconPath = 'assets/icons/zu_word.svg';
+  final noteWordIconPath = 'assets/icons/note_word.svg';
+  final thunderIconPath = 'assets/icons/thunder.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330;
