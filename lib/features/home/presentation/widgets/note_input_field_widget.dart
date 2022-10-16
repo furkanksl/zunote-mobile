@@ -11,7 +11,7 @@ class NoteInputField extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: const Color(0xFFD0D0D0),
+        color: Color(AppStyle.instance.grayColor),
         boxShadow: AppStyle.instance.boxShadow,
       ),
       child: const TextField(

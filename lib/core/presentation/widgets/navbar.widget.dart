@@ -18,7 +18,7 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final toggleMenu = ref.watch(homePageProvider).toggleMenu;
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Color(AppStyle.instance.primaryColor),
       elevation: 0,
       titleSpacing: 0,
       leadingWidth: 130,
