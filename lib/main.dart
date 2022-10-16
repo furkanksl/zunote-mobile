@@ -16,6 +16,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // @override
+  // void initState() {
+  //  Timer(Duration(seconds: 3),
+  //         ()=>Navigator.pushReplacement(context,
+  //                                       MaterialPageRoute(builder:
+  //                                                         (context) =>
+  //                                                         HomeScreen()
+  //                                                        )
+  //                                      )
+  //        );
+
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Sizer(
