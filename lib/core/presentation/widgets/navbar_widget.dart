@@ -26,7 +26,7 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         constraints: const BoxConstraints(maxWidth: 130),
         width: 130,
-        child: SvgPicture.asset(AppStyle.instance.logoPath),
+        child: SvgPicture.asset(AppStyle.instance.logoMiniPath),
       ),
       actions: [
         Padding(

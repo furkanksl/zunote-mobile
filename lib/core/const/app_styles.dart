@@ -7,6 +7,7 @@ class AppStyle {
 
   // Asset consts
   final logoPath = 'assets/icons/logo.svg';
+  final logoMiniPath = 'assets/icons/logo_mini.svg';
   final emailIconPath = 'assets/icons/email.svg';
   final passwordIconPath = 'assets/icons/password.svg';
   final playStoreIconPath = 'assets/icons/play-store.svg';
@@ -19,11 +20,20 @@ class AppStyle {
   final reminderIconPath = 'assets/icons/reminder.svg';
   final microphoneIconPath = 'assets/icons/microphone.svg';
   final addIconPath = 'assets/icons/add.svg';
+
   final zuWordIconPath = 'assets/icons/zu_word.svg';
   final noteWordIconPath = 'assets/icons/note_word.svg';
   final thunderIconPath = 'assets/icons/thunder.svg';
+
   final grayAddIconPath = 'assets/icons/gray_add.svg';
   final removeIconPath = 'assets/icons/remove.svg';
+
+  final homeIconPath = 'assets/icons/home.svg';
+  final grayHomeIconPath = 'assets/icons/home_gray.svg';
+  final notesIconPath = 'assets/icons/notes.svg';
+  final grayNotesIconPath = 'assets/icons/notes_gray.svg';
+  final subscriptionIconPath = 'assets/icons/subscription.svg';
+  final graySubscriptionIconPath = 'assets/icons/subscription_gray.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330;
