@@ -12,13 +12,20 @@ class ActionSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CircleButton(
             size: const Size(65, 65),
             svgPath: AppStyle.instance.microphoneIconPath,
             onClick: () {},
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.transparent,
+              height: 65,
+            ),
           ),
           CircleButton(
             size: const Size(65, 65),
