@@ -8,12 +8,13 @@ import 'package:zunote/core/presentation/widgets/bottom_navbar_widget.dart';
 import 'package:zunote/core/presentation/widgets/navbar_widget.dart';
 import 'package:zunote/features/home/presentation/state/home_state.dart';
 import 'package:zunote/features/home/presentation/widgets/home_body_widget.dart';
+import 'package:zunote/features/subscription/presentation/subscription_page.dart';
 
 class HomeScreen extends ConsumerWidget {
   HomeScreen({Key? key}) : super(key: key);
 
   List<Widget> pageList = [
-    Container(),
+    SubscriptionPage(),
     const HomeBody(),
     Container(),
   ];

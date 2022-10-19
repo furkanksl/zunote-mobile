@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) => MaterialApp(
         title: 'ZUNOTE',
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'NotoSans'),
         color: Color(AppStyle.instance.primaryColor),
         home: const SplashScreen(),
       ),
