@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
 import 'package:zunote/core/const/app_styles.dart';
+import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
 
 class AuthOptions extends StatelessWidget {
   const AuthOptions({
@@ -21,7 +22,10 @@ class AuthOptions extends StatelessWidget {
             height: 60,
             width: 60,
             child: Center(
-                child: SvgPicture.asset(AppStyle.instance.playStoreIconPath)),
+              child: WidgetShadower(
+                child: SvgPicture.asset(AppStyle.instance.playStoreIconPath),
+              ),
+            ),
           ),
         ),
         SizedBox(width: 10.w),
@@ -32,7 +36,10 @@ class AuthOptions extends StatelessWidget {
             height: 60,
             width: 60,
             child: Center(
-                child: SvgPicture.asset(AppStyle.instance.appStpreIconPath)),
+              child: WidgetShadower(
+                child: SvgPicture.asset(AppStyle.instance.appStpreIconPath),
+              ),
+            ),
           ),
         ),
       ],
