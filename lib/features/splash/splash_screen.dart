@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:simple_shadow/simple_shadow.dart';
+
 import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/features/home/presentation/home_screen.dart';
 
@@ -48,7 +50,9 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               child: SizedBox(
                 height: 50,
-                child: SvgPicture.asset(AppStyle.instance.zuWordIconPath),
+                child: SimpleShadow(
+                  child: SvgPicture.asset(AppStyle.instance.zuWordIconPath),
+                ),
               ),
             ),
             TweenAnimationBuilder(
@@ -61,7 +65,9 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               child: SizedBox(
                 height: 50,
-                child: SvgPicture.asset(AppStyle.instance.noteWordIconPath),
+                child: SimpleShadow(
+                  child: SvgPicture.asset(AppStyle.instance.noteWordIconPath),
+                ),
               ),
             ),
             TweenAnimationBuilder(
@@ -74,7 +80,9 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               child: SizedBox(
                 width: 50,
-                child: SvgPicture.asset(AppStyle.instance.thunderIconPath),
+                child: SimpleShadow(
+                  child: SvgPicture.asset(AppStyle.instance.thunderIconPath),
+                ),
               ),
             ),
           ],
