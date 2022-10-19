@@ -19,19 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(
-      builder: (context, orientation, deviceType) => Listener(
-        onPointerDown: (_) {
-          FocusScopeNode currentFocus = FocusScope.of(context);
-          if (!currentFocus.hasPrimaryFocus) {
-            currentFocus.focusedChild?.unfocus();
-          }
-        },
-        child: MaterialApp(
-          title: 'ZUNOTE',
-          debugShowCheckedModeBanner: false,
-          color: Color(AppStyle.instance.primaryColor),
-          home: const SplashScreen(),
-        ),
+      builder: (context, orientation, deviceType) => MaterialApp(
+        title: 'ZUNOTE',
+        debugShowCheckedModeBanner: false,
+        color: Color(AppStyle.instance.primaryColor),
+        home: const SplashScreen(),
       ),
     );
   }
