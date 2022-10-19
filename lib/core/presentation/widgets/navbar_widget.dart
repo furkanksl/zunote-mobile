@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:simple_shadow/simple_shadow.dart';
 import 'package:sizer/sizer.dart';
 import 'package:zunote/core/const/app_styles.dart';
+import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
 import 'package:zunote/features/home/presentation/state/home_state.dart';
 
 class NavBar extends ConsumerWidget implements PreferredSizeWidget {
@@ -28,7 +30,10 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         constraints: const BoxConstraints(maxWidth: 130),
         width: 130,
-        child: SvgPicture.asset(AppStyle.instance.logoMiniPath),
+        child: SimpleShadow(
+          color: Colors.black,
+          child: SvgPicture.asset(AppStyle.instance.logoMiniPath),
+        ),
       ),
       actions: [
         Padding(
@@ -69,7 +74,9 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
                         children: [
                           SizedBox(
                             width: 35,
-                            child: SvgPicture.asset(AppStyle.instance.aboutIconPath),
+                            child: WidgetShadower(
+                              child: SvgPicture.asset(AppStyle.instance.aboutIconPath),
+                            ),
                           ),
                           const SizedBox(width: 10),
                           const Text("About"),
@@ -87,7 +94,9 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
                         children: [
                           SizedBox(
                             width: 35,
-                            child: SvgPicture.asset(AppStyle.instance.logoutIconPath),
+                            child: WidgetShadower(
+                              child: SvgPicture.asset(AppStyle.instance.logoutIconPath),
+                            ),
                           ),
                           const SizedBox(width: 10),
                           const Text("Logout"),
@@ -100,8 +109,10 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 45),
                 width: 20.w,
-                child: SvgPicture.asset(
-                  toggleMenu ? AppStyle.instance.closeIconPath : AppStyle.instance.menuIconPath,
+                child: WidgetShadower(
+                  child: SvgPicture.asset(
+                    toggleMenu ? AppStyle.instance.closeIconPath : AppStyle.instance.menuIconPath,
+                  ),
                 ),
               ),
             ),
