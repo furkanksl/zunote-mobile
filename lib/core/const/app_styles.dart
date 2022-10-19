@@ -34,6 +34,9 @@ class AppStyle {
   final grayNotesIconPath = 'assets/icons/notes_gray.svg';
   final subscriptionIconPath = 'assets/icons/subscription.svg';
   final graySubscriptionIconPath = 'assets/icons/subscription_gray.svg';
+  final standartPlanIconPath = 'assets/icons/standart_plan.svg';
+  final premiumPlanIconPath = 'assets/icons/premium_plan.svg';
+  final upgradeIconPath = 'assets/icons/upgrade.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330;
@@ -41,6 +44,7 @@ class AppStyle {
   final secondaryColor = 0xFFFCD36E;
   final grayColor = 0xFFD9D9D9;
   final grayishTextColor = 0xFF747474;
+  final buttonColor = 0xFFFFB500;
 
   final boxShadow = const [
     BoxShadow(
