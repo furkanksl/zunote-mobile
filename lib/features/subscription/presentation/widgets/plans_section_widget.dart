@@ -15,7 +15,7 @@ class PlansSection extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(
         minHeight: 200,
-        maxHeight: 380,
+        maxHeight: 390,
         maxWidth: 100.w,
         minWidth: 90.w,
       ),
