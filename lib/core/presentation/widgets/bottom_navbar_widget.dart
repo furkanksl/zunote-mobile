@@ -16,7 +16,7 @@ class BottomNavBar extends ConsumerWidget {
     setIndex(int index) => ref.read(homePageProvider.notifier).setNavIndex(index);
 
     return Container(
-      height: 100,
+      height: 85,
       width: 100.w,
       margin: const EdgeInsets.only(top: 20),
       decoration: BoxDecoration(

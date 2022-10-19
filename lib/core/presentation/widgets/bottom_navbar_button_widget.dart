@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
 
 class BottomNavBarButton extends StatelessWidget {
   const BottomNavBarButton({
@@ -17,7 +18,9 @@ class BottomNavBarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onClick(),
-      child: SvgPicture.asset(isSelected ? "${iconPath.substring(0, iconPath.length - 4)}_gray.svg" : iconPath),
+      child: WidgetShadower(
+        child: SvgPicture.asset(isSelected ? "${iconPath.substring(0, iconPath.length - 4)}_gray.svg" : iconPath),
+      ),
     );
   }
 }
