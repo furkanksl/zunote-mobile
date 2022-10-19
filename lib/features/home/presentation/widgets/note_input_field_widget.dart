@@ -19,7 +19,7 @@ class NoteInputField extends StatelessWidget {
         cursorColor: Colors.black,
         cursorHeight: 16,
         cursorRadius: Radius.circular(20),
-        keyboardType: TextInputType.text,
+        keyboardType: TextInputType.multiline,
         maxLines: 5,
         decoration: InputDecoration(
           border: InputBorder.none,

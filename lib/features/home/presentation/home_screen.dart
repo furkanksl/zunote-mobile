@@ -26,9 +26,7 @@ class HomeScreen extends ConsumerWidget {
       backgroundColor: Color(AppStyle.instance.primaryColor),
       bottomNavigationBar: const BottomNavBar(),
       appBar: NavBar(),
-      body: SafeArea(
-        child: Center(child: pageList.elementAt(navIndex)),
-      ),
+      body: pageList.elementAt(navIndex),
     );
   }
 }
