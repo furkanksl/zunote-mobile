@@ -17,6 +17,7 @@ class AppStyle {
   final aboutIconPath = 'assets/icons/about.svg';
   final logoutIconPath = 'assets/icons/logout.svg';
   final categoryIconPath = 'assets/icons/category.svg';
+  final categoryBlackIconPath = 'assets/icons/category_black.svg';
   final reminderIconPath = 'assets/icons/reminder.svg';
   final microphoneIconPath = 'assets/icons/microphone.svg';
   final addIconPath = 'assets/icons/add.svg';
@@ -37,6 +38,12 @@ class AppStyle {
   final standartPlanIconPath = 'assets/icons/standart_plan.svg';
   final premiumPlanIconPath = 'assets/icons/premium_plan.svg';
   final upgradeIconPath = 'assets/icons/upgrade.svg';
+  final textNoteIconPath = 'assets/icons/text_note.svg';
+  final textNoteWhiteIconPath = 'assets/icons/text_note_white.svg';
+  final voiceNoteIconPath = 'assets/icons/voice_note.svg';
+  final voiceNoteWhiteIconPath = 'assets/icons/voice_note_white.svg';
+  final miniPlayIconPath = 'assets/icons/mini_play.svg';
+  final miniPauseIconPath = 'assets/icons/mini_pause.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330;
