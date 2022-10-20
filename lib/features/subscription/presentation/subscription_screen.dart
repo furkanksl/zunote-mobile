@@ -5,8 +5,8 @@ import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/features/subscription/presentation/widgets/current_plan_widget.dart';
 import 'package:zunote/features/subscription/presentation/widgets/plans_section_widget.dart';
 
-class SubscriptionPage extends StatelessWidget {
-  SubscriptionPage({Key? key}) : super(key: key);
+class SubscriptionScreen extends StatelessWidget {
+  SubscriptionScreen({Key? key}) : super(key: key);
 
   final List<String> planItems = [
     "3 mins single recording time",
