@@ -19,7 +19,7 @@ class SettingsCard extends StatelessWidget {
       width: 100.w,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Color(AppStyle.instance.secondaryColor),
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(10),
         boxShadow: AppStyle.instance.boxShadow,
       ),
@@ -36,7 +36,7 @@ class SettingsCard extends StatelessWidget {
           Divider(
             height: 10,
             thickness: 1,
-            color: Color(AppStyle.instance.primaryDarkColor),
+            color: Theme.of(context).dividerColor,
           ),
           child,
         ],

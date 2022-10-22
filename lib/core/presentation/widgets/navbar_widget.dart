@@ -28,7 +28,7 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(AppStyle.instance.primaryColor),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       elevation: 0,
       titleSpacing: 0,
       leadingWidth: 130,
@@ -47,7 +47,7 @@ class _NavBarState extends State<NavBar> {
           child: PopupMenuButton(
             key: popupButtonKey,
             padding: EdgeInsets.zero,
-            color: Color(AppStyle.instance.secondaryColor),
+            color: Theme.of(context).cardColor,
             position: PopupMenuPosition.over,
             constraints: BoxConstraints(
               maxWidth: (100.w - 20),

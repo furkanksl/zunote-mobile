@@ -16,7 +16,7 @@ class JustAddedSection extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
             decoration: BoxDecoration(
-              color: Color(AppStyle.instance.secondaryColor),
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(10),
               boxShadow: AppStyle.instance.boxShadow,
             ),

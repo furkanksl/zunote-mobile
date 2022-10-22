@@ -16,7 +16,7 @@ void showDeleteDialog(BuildContext context) {
 Dialog categoryDialog(BuildContext context) => Dialog(
       elevation: 0,
 
-      backgroundColor: Color(AppStyle.instance.secondaryColor),
+      backgroundColor: Theme.of(context).cardColor,
       insetPadding: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
@@ -42,7 +42,7 @@ Dialog categoryDialog(BuildContext context) => Dialog(
                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(AppStyle.instance.grayColor),
+                    color: Theme.of(context).indicatorColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
                   child: const Text(
@@ -60,7 +60,7 @@ Dialog categoryDialog(BuildContext context) => Dialog(
                   constraints: const BoxConstraints(maxWidth: 280),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(AppStyle.instance.primaryColor),
+                    color: Theme.of(context).scaffoldBackgroundColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
                   child: OutlinedButton(
@@ -99,7 +99,7 @@ Dialog categoryDialog(BuildContext context) => Dialog(
                         width: 100.w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(AppStyle.instance.primaryColor),
+                          color: Theme.of(context).scaffoldBackgroundColor,
                           boxShadow: AppStyle.instance.boxShadow,
                         ),
                         child: OutlinedButton(

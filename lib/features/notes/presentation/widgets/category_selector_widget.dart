@@ -19,7 +19,7 @@ class CategorySelector extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(AppStyle.instance.secondaryColor),
+        color: Theme.of(context).cardColor,
         boxShadow: AppStyle.instance.boxShadow,
       ),
       child: OutlinedButton(

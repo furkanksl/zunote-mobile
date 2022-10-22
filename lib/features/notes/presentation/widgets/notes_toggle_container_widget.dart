@@ -17,7 +17,7 @@ class NotesToggleContainer extends ConsumerWidget {
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(AppStyle.instance.buttonColor),
+        color: Theme.of(context).canvasColor,
         boxShadow: AppStyle.instance.boxShadow,
       ),
       child: Row(

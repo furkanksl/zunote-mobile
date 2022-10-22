@@ -19,7 +19,7 @@ class VoiceNotePlayer extends StatelessWidget {
         margin: const EdgeInsets.only(top: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Color(AppStyle.instance.grayColor),
+          color: Theme.of(context).indicatorColor,
         ),
       ),
     );

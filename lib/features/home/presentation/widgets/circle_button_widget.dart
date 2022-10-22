@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
-
 class CircleButton extends StatelessWidget {
   const CircleButton({
     required this.size,
@@ -38,11 +36,9 @@ class CircleButton extends StatelessWidget {
           ),
         ),
         onPressed: () => onClick(),
-        child: WidgetShadower(
-          child: SvgPicture.asset(
-            svgPath,
-            fit: BoxFit.fill,
-          ),
+        child: SvgPicture.asset(
+          svgPath,
+          fit: BoxFit.fill,
         ),
       ),
     );

@@ -15,7 +15,7 @@ class NoteDetailActionButton extends StatelessWidget {
       constraints: const BoxConstraints(minWidth: 150),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(AppStyle.instance.grayColor),
+        color: Theme.of(context).indicatorColor,
         boxShadow: AppStyle.instance.boxShadow,
       ),
       child: OutlinedButton(

@@ -17,7 +17,7 @@ class NoteEditCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 12),
         decoration: BoxDecoration(
           boxShadow: AppStyle.instance.boxShadow,
-          color: Color(AppStyle.instance.secondaryColor),
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(

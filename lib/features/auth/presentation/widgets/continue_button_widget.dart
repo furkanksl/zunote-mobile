@@ -24,7 +24,7 @@ class ContinueButton extends ConsumerWidget {
           Colors.black12,
         ),
         backgroundColor: MaterialStatePropertyAll(
-          Color(AppStyle.instance.secondaryColor),
+          Theme.of(context).cardColor,
         ),
         fixedSize: const MaterialStatePropertyAll(
           Size(140, 40),

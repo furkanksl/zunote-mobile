@@ -12,10 +12,10 @@ class NoteDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(AppStyle.instance.primaryColor),
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
       ),
-      backgroundColor: Color(AppStyle.instance.primaryColor),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: NoteDetailBody(isVoiceNote: isVoiceNote),
     );
   }

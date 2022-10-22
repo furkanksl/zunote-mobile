@@ -22,7 +22,7 @@ class PlanCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         boxShadow: AppStyle.instance.boxShadow,
-        color: Color(AppStyle.instance.secondaryColor),
+        color: Theme.of(context).cardColor,
       ),
       margin: const EdgeInsets.only(right: 20, bottom: 20, left: 10),
       child: Column(
@@ -59,9 +59,7 @@ class PlanCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               boxShadow: AppStyle.instance.boxShadow,
-              color: Color(
-                AppStyle.instance.buttonColor,
-              ),
+              color: Theme.of(context).canvasColor,
             ),
             child: OutlinedButton(
               onPressed: () {},

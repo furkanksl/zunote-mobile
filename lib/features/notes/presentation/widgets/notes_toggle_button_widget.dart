@@ -32,7 +32,7 @@ class NotesToggleButton extends ConsumerWidget {
             height: 5.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: toggleIndex == index ? Color(AppStyle.instance.secondaryColor) : Colors.transparent,
+              color: toggleIndex == index ? Theme.of(context).cardColor : Colors.transparent,
             ),
             child: Center(
               child: WidgetShadower(

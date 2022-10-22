@@ -28,7 +28,7 @@ class BottomNavBar extends ConsumerWidget {
             color: Colors.black26,
           ),
         ],
-        color: Color(AppStyle.instance.primaryColor),
+        color: Theme.of(context).scaffoldBackgroundColor,
         borderRadius: const BorderRadius.horizontal(
           left: Radius.circular(15),
           right: Radius.circular(15),

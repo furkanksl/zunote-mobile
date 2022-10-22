@@ -51,14 +51,6 @@ class AppStyle {
   final arabicIconPath = 'assets/icons/arabic.svg';
   final germanIconPath = 'assets/icons/german.svg';
 
-  // Style const
-  final primaryColor = 0xFFFFC330; // 0xFF9C937D
-  final primaryDarkColor = 0xFF3C3C3C;
-  final secondaryColor = 0xFFFCD36E;
-  final grayColor = 0xFFD9D9D9;
-  final grayishTextColor = 0xFF747474;
-  final buttonColor = 0xFFFFB500;
-
   final boxShadow = const [
     BoxShadow(
       color: Colors.black26,

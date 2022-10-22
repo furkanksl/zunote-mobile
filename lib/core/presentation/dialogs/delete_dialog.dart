@@ -5,7 +5,7 @@ import 'package:zunote/core/const/app_styles.dart';
 
 Dialog deleteDialog(BuildContext context) => Dialog(
       elevation: 1,
-      backgroundColor: Color(AppStyle.instance.secondaryColor),
+      backgroundColor: Theme.of(context).cardColor,
       insetPadding: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
@@ -31,7 +31,7 @@ Dialog deleteDialog(BuildContext context) => Dialog(
                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(AppStyle.instance.grayColor),
+                    color: Theme.of(context).indicatorColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
                   child: const Text(
@@ -51,12 +51,12 @@ Dialog deleteDialog(BuildContext context) => Dialog(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     DialogButton(
-                      color: AppStyle.instance.grayColor,
+                      color: Theme.of(context).indicatorColor.value,
                       onClick: () {},
                       buttonName: "Cancel",
                     ),
                     DialogButton(
-                      color: AppStyle.instance.primaryColor,
+                      color: Theme.of(context).scaffoldBackgroundColor.value,
                       onClick: () {},
                       buttonName: "Confirm",
                     ),
@@ -102,11 +102,10 @@ class DialogButton extends StatelessWidget {
         ),
         child: Text(
           buttonName,
-          style: TextStyle(
-            color: Color(AppStyle.instance.grayishTextColor),
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
         ),
       ),
     );

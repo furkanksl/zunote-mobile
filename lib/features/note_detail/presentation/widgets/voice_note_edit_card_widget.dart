@@ -14,7 +14,7 @@ class VoiceNoteEditCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 20, right: 5, left: 5),
       decoration: BoxDecoration(
         boxShadow: AppStyle.instance.boxShadow,
-        color: Color(AppStyle.instance.secondaryColor),
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
