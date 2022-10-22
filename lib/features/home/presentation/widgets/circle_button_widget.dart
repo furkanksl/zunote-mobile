@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zunote/core/const/app_styles.dart';
+
 import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
 
 class CircleButton extends StatelessWidget {

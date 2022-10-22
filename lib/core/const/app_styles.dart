@@ -45,9 +45,14 @@ class AppStyle {
   final miniPlayIconPath = 'assets/icons/mini_play.svg';
   final miniPauseIconPath = 'assets/icons/mini_pause.svg';
   final trashIconPath = 'assets/icons/trash.svg';
+  final settingsIconPath = 'assets/icons/settings.svg';
+  final turkishIconPath = 'assets/icons/turkish.svg';
+  final englishIconPath = 'assets/icons/english.svg';
+  final arabicIconPath = 'assets/icons/arabic.svg';
+  final germanIconPath = 'assets/icons/german.svg';
 
   // Style const
-  final primaryColor = 0xFFFFC330;
+  final primaryColor = 0xFFFFC330; // 0xFF9C937D
   final primaryDarkColor = 0xFF3C3C3C;
   final secondaryColor = 0xFFFCD36E;
   final grayColor = 0xFFD9D9D9;

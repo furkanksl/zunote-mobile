@@ -44,7 +44,7 @@ Dialog deleteDialog(BuildContext context) => Dialog(
                   ),
                 ),
                 SizedBox(height: 2.h),
-                Text("Are you sure to proceed?"),
+                const Text("Are you sure to proceed?"),
                 SizedBox(height: 2.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

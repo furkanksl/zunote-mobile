@@ -10,7 +10,7 @@ import 'package:zunote/features/auth/presentation/widgets/continue_button_widget
 import 'package:zunote/features/auth/presentation/widgets/input_field_widget.dart';
 
 class AuthForm extends ConsumerWidget {
-  AuthForm({Key? key}) : super(key: key);
+  const AuthForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
