@@ -44,6 +44,7 @@ class AppStyle {
   final voiceNoteWhiteIconPath = 'assets/icons/voice_note_white.svg';
   final miniPlayIconPath = 'assets/icons/mini_play.svg';
   final miniPauseIconPath = 'assets/icons/mini_pause.svg';
+  final trashIconPath = 'assets/icons/trash.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330;
