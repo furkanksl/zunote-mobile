@@ -27,7 +27,7 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Color(AppStyle.instance.primaryColor),
       bottomNavigationBar: const BottomNavBar(),
-      appBar: NavBar(),
+      appBar: const NavBar(),
       body: pageList.elementAt(navIndex),
     );
   }

@@ -28,7 +28,7 @@ class _AuthScreenState extends State<AuthScreen> {
               const Logo(),
               const AuthToggleContainer(),
               SizedBox(height: 8.h),
-              AuthForm(),
+              const AuthForm(),
               SizedBox(height: 3.h),
               const Text("Or"),
               SizedBox(height: 3.h),
