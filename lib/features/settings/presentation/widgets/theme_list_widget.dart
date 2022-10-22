@@ -2,24 +2,29 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:zunote/core/data/service/app_local_service.dart';
 
 import 'package:zunote/core/theme/state/theme_provider.dart';
 import 'package:zunote/features/settings/domain/entity/theme_entity.dart';
 import 'package:zunote/features/settings/presentation/widgets/theme_box_widget.dart';
 
 class ThemeList extends ConsumerWidget {
-  const ThemeList({
+  ThemeList({
     Key? key,
     required this.list,
   }) : super(key: key);
 
   final List<ThemeEntity> list;
+  final appLocalService = AppLocalService();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeIndex = ref.watch(themeProvider).themeIndex;
 
-    selectTheme(int index) => ref.read(themeProvider.notifier).setThemeIndex(index);
+    selectTheme(int index) {
+      ref.read(themeProvider.notifier).setThemeIndex(index);
+      appLocalService.saveThemeIndex(index);
+    }
 
     return SizedBox(
       height: 50,
