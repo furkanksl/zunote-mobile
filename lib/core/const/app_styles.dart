@@ -46,6 +46,10 @@ class AppStyle {
   final miniPauseIconPath = 'assets/icons/mini_pause.svg';
   final trashIconPath = 'assets/icons/trash.svg';
   final settingsIconPath = 'assets/icons/settings.svg';
+  final turkishIconPath = 'assets/icons/turkish.svg';
+  final englishIconPath = 'assets/icons/english.svg';
+  final arabicIconPath = 'assets/icons/arabic.svg';
+  final germanIconPath = 'assets/icons/german.svg';
 
   // Style const
   final primaryColor = 0xFFFFC330; // 0xFF9C937D
