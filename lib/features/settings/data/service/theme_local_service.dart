@@ -6,53 +6,43 @@ import 'package:zunote/features/settings/domain/entity/theme_entity.dart';
 class ThemeLocalService {
   final List<ThemeEntity> _themeList = [
     ThemeEntity(
-      color1: Colors.red,
-      color2: Colors.black,
-      isSelected: true,
-    ),
-    ThemeEntity(
-      color1: Colors.blue,
-      color2: Colors.white,
+      color1: const Color(0xFFFFC330),
+      color2: const Color(0xFFFCD36E),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.grey,
-      color2: Colors.yellow,
+      color1: const Color(0xFF6D6D6E),
+      color2: const Color(0xFF979797),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.white,
-      color2: Colors.black,
+      color1: const Color(0xFF9C937D),
+      color2: const Color(0xFFB5A98B),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.orange,
-      color2: Colors.green,
+      color1: const Color(0xFFF5C29E),
+      color2: const Color(0xFFC5B0A6),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.brown,
-      color2: Colors.black,
+      color1: const Color(0xFFA89891),
+      color2: const Color(0xFFF5C29E),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.grey,
-      color2: Colors.yellow,
+      color1: const Color(0xFF0DBFEC),
+      color2: const Color(0xFF75D2F4),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.white,
-      color2: Colors.black,
+      color1: const Color(0xFFB295C7),
+      color2: const Color(0xFFF495D4),
       isSelected: false,
     ),
     ThemeEntity(
-      color1: Colors.orange,
-      color2: Colors.green,
-      isSelected: false,
-    ),
-    ThemeEntity(
-      color1: Colors.brown,
-      color2: Colors.black,
+      color1: const Color(0xFF32E48E),
+      color2: const Color(0xFF44CE31),
       isSelected: false,
     ),
   ];
