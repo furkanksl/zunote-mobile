@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/features/settings/presentation/widgets/settings_body.dart';
 
 class SettingsScreen extends StatefulWidget {

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
-import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
 import 'package:zunote/features/auth/presentation/state/auth_state.dart';
 

@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/core/presentation/widgets/bottom_navbar_widget.dart';
 import 'package:zunote/core/presentation/widgets/navbar_widget.dart';
 import 'package:zunote/features/home/presentation/state/home_state.dart';

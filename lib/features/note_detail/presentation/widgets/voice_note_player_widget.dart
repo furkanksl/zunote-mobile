@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zunote/core/const/app_styles.dart';
 
 class VoiceNotePlayer extends StatelessWidget {
   const VoiceNotePlayer({
