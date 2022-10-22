@@ -72,11 +72,27 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            width: 35,
-                            child: WidgetShadower(
-                              child: SvgPicture.asset(AppStyle.instance.aboutIconPath),
-                            ),
+                          SvgPicture.asset(
+                            AppStyle.instance.settingsIconPath,
+                            width: 30,
+                          ),
+                          const SizedBox(width: 10),
+                          const Text("Settings"),
+                        ],
+                      ),
+                    ),
+                  ),
+                  PopupMenuItem<int>(
+                    value: 0,
+                    child: SizedBox(
+                      width: (100.w),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            AppStyle.instance.aboutIconPath,
+                            width: 30,
                           ),
                           const SizedBox(width: 10),
                           const Text("About"),
@@ -92,11 +108,9 @@ class NavBar extends ConsumerWidget implements PreferredSizeWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            width: 35,
-                            child: WidgetShadower(
-                              child: SvgPicture.asset(AppStyle.instance.logoutIconPath),
-                            ),
+                          SvgPicture.asset(
+                            AppStyle.instance.logoutIconPath,
+                            width: 30,
                           ),
                           const SizedBox(width: 10),
                           const Text("Logout"),
