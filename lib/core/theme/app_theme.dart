@@ -61,6 +61,12 @@ class AppTheme {
     canvasColor: const Color(0xFF5CDA4C),
   );
 
+  static final customTheme8 = defaultTheme.copyWith(
+    scaffoldBackgroundColor: const Color(0xB80DBFEC),
+    cardColor: const Color(0xC075D2F4),
+    canvasColor: const Color(0xFF50C4EE),
+  );
+
   static final myThemes = [
     defaultTheme,
     customTheme1,
@@ -70,5 +76,6 @@ class AppTheme {
     customTheme5,
     customTheme6,
     customTheme7,
+    customTheme8,
   ];
 }

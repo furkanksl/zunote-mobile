@@ -45,6 +45,11 @@ class ThemeLocalService {
       color2: const Color(0xFF44CE31),
       isSelected: false,
     ),
+    ThemeEntity(
+      color1: const Color(0xB80DBFEC),
+      color2: const Color(0xC075D2F4),
+      isSelected: false,
+    ),
   ];
 
   final List<LanguageEntity> _languageList = [
