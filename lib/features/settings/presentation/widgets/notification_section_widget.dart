@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 
 class NotificationSection extends StatefulWidget {
@@ -16,14 +17,14 @@ class _NotificationSectionState extends State<NotificationSection> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(
-          child: Text(
-            "Keep it active if you don't want to miss your note reminders!",
+        Expanded(
+          child: const Text(
+            "notification-msg",
             style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w400,
             ),
-          ),
+          ).tr(),
         ),
         CupertinoSwitch(
           value: notificationToggle,

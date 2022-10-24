@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -34,7 +35,7 @@ class ListItemWidget extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w300,
               ),
-            ),
+            ).tr(),
           ),
         ],
       ),

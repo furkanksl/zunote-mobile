@@ -3,7 +3,7 @@ import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/features/settings/domain/entity/language_entity.dart';
 import 'package:zunote/features/settings/domain/entity/theme_entity.dart';
 
-class ThemeLocalService {
+class SettingsLocalService {
   final List<ThemeEntity> _themeList = [
     ThemeEntity(
       color1: const Color(0xFFFFC330),
@@ -54,24 +54,20 @@ class ThemeLocalService {
 
   final List<LanguageEntity> _languageList = [
     LanguageEntity(
-      symbol: 'en-US',
+      symbol: 'en',
       iconPath: AppStyle.instance.englishIconPath,
-      isSelected: true,
     ),
     LanguageEntity(
-      symbol: 'tr-TR',
+      symbol: 'tr',
       iconPath: AppStyle.instance.turkishIconPath,
-      isSelected: false,
     ),
     LanguageEntity(
-      symbol: 'de-US',
+      symbol: 'de',
       iconPath: AppStyle.instance.germanIconPath,
-      isSelected: false,
     ),
     LanguageEntity(
-      symbol: 'en-US',
+      symbol: 'ar',
       iconPath: AppStyle.instance.arabicIconPath,
-      isSelected: false,
     )
   ];
 

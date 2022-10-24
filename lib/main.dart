@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
@@ -9,13 +10,25 @@ import 'package:zunote/features/splash/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
   final appLocalService = AppLocalService();
   final int themeIndex = await appLocalService.getThemeIndex();
 
   runApp(
     ProviderScope(
-      child: MyApp(
-        themeIndex: themeIndex,
+      child: EasyLocalization(
+        supportedLocales: const [
+          Locale('en', 'US'),
+          Locale('tr', 'TR'),
+          Locale('de', 'DE'),
+          Locale('ar', 'AE'),
+        ],
+        path: 'assets/translations',
+        fallbackLocale: const Locale('en', 'US'),
+        child: MyApp(
+          themeIndex: themeIndex,
+        ),
       ),
     ),
   );
@@ -36,6 +49,9 @@ class MyApp extends ConsumerWidget {
     return Sizer(
       builder: (context, orientation, deviceType) => MaterialApp(
         title: 'ZUNOTE',
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.myThemes[themeIndex ?? this.themeIndex],
         color: Theme.of(context).scaffoldBackgroundColor,

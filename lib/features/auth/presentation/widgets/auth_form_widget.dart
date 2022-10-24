@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
@@ -26,7 +27,7 @@ class AuthForm extends ConsumerWidget {
           InputField(
             controller: TextEditingController(text: authProvider.email),
             isObscureText: false,
-            hintText: 'Email',
+            hintText: 'email'.tr(),
             iconPath: AppStyle.instance.emailIconPath,
             inputType: TextInputType.emailAddress,
             onChange: (String value) => ref.read(authPageProvider.notifier).setEmail(value),
@@ -36,7 +37,7 @@ class AuthForm extends ConsumerWidget {
             key: const Key("#PasswordInput"),
             controller: TextEditingController(text: authProvider.password),
             isObscureText: true,
-            hintText: 'Password',
+            hintText: 'password'.tr(),
             iconPath: AppStyle.instance.passwordIconPath,
             inputType: TextInputType.text,
             onChange: (String value) => ref.read(authPageProvider.notifier).setPassword(value),
@@ -47,7 +48,7 @@ class AuthForm extends ConsumerWidget {
             child: InputField(
               controller: TextEditingController(text: authProvider.passwordAgain),
               isObscureText: true,
-              hintText: 'Password again',
+              hintText: 'password-again'.tr(),
               iconPath: AppStyle.instance.passwordIconPath,
               inputType: TextInputType.text,
               onChange: (String value) => ref.read(authPageProvider.notifier).setPasswordAgain(value),

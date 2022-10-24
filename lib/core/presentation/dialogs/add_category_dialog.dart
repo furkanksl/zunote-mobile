@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -34,9 +35,9 @@ Dialog addCategoryDialog(BuildContext context) => Dialog(
                     color: Theme.of(context).indicatorColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
-                  child: const Text(
-                    "ADD CATEGORY",
-                    style: TextStyle(
+                  child: Text(
+                    "add-category".tr(),
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -50,18 +51,18 @@ Dialog addCategoryDialog(BuildContext context) => Dialog(
                     color: Theme.of(context).indicatorColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
-                  child: const TextField(
-                    style: TextStyle(fontSize: 16),
+                  child: TextField(
+                    style: const TextStyle(fontSize: 16),
                     cursorColor: Colors.black,
                     cursorHeight: 16,
-                    cursorRadius: Radius.circular(20),
+                    cursorRadius: const Radius.circular(20),
                     keyboardType: TextInputType.text,
                     maxLines: 2,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.all(20),
-                      hintText: "Type something...",
-                      hintStyle: TextStyle(
+                      contentPadding: const EdgeInsets.all(20),
+                      hintText: "type-smth".tr(),
+                      hintStyle: const TextStyle(
                         fontWeight: FontWeight.w200,
                       ),
                     ),
@@ -84,9 +85,9 @@ Dialog addCategoryDialog(BuildContext context) => Dialog(
                       foregroundColor: Colors.black12,
                       side: const BorderSide(color: Colors.transparent),
                     ),
-                    child: const Text(
-                      "ADD",
-                      style: TextStyle(
+                    child: Text(
+                      "add".tr(),
+                      style: const TextStyle(
                         color: Color(0xFF747474),
                         fontSize: 16,
                         fontWeight: FontWeight.bold,

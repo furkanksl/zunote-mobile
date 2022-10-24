@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -34,9 +35,9 @@ Dialog deleteDialog(BuildContext context) => Dialog(
                     color: Theme.of(context).indicatorColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
-                  child: const Text(
-                    "DELETE",
-                    style: TextStyle(
+                  child: Text(
+                    "delete".tr(),
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -44,7 +45,7 @@ Dialog deleteDialog(BuildContext context) => Dialog(
                   ),
                 ),
                 SizedBox(height: 2.h),
-                const Text("Are you sure to proceed?"),
+                Text("delete-msg".tr()),
                 SizedBox(height: 2.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,12 +54,12 @@ Dialog deleteDialog(BuildContext context) => Dialog(
                     DialogButton(
                       color: Theme.of(context).indicatorColor.value,
                       onClick: () {},
-                      buttonName: "Cancel",
+                      buttonName: "cancel".tr(),
                     ),
                     DialogButton(
                       color: Theme.of(context).scaffoldBackgroundColor.value,
                       onClick: () {},
-                      buttonName: "Confirm",
+                      buttonName: "confirm".tr(),
                     ),
                   ],
                 ),

@@ -9,8 +9,8 @@ class SubscriptionScreen extends StatelessWidget {
   SubscriptionScreen({Key? key}) : super(key: key);
 
   final List<String> planItems = [
-    "3 mins single recording time",
-    "10 voice notes",
+    "free-plan-item-1",
+    "free-plan-item-2",
   ];
 
   final List<dynamic> plans = [
@@ -18,7 +18,7 @@ class SubscriptionScreen extends StatelessWidget {
       "name": "Standart",
       "price": 19,
       "annual": true,
-      "items": ["10 mins single recording time", "100 voice notes"],
+      "items": ["standart-plan-item-1", "standart-plan-item-2"],
       "planPrice": 39,
       "planId": 1,
       "icon": AppStyle.instance.standartPlanIconPath,
@@ -27,7 +27,7 @@ class SubscriptionScreen extends StatelessWidget {
       "name": "Premium",
       "price": 39,
       "annual": true,
-      "items": ["30 mins single recording time", "Unlimited voice notes"],
+      "items": ["premium-plan-item-1", "premium-plan-item-2"],
       "planPrice": 39,
       "planId": 2,
       "icon": AppStyle.instance.premiumPlanIconPath,

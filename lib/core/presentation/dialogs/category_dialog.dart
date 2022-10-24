@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -45,9 +46,9 @@ Dialog categoryDialog(BuildContext context) => Dialog(
                     color: Theme.of(context).indicatorColor,
                     boxShadow: AppStyle.instance.boxShadow,
                   ),
-                  child: const Text(
-                    "CATEGORIES",
-                    style: TextStyle(
+                  child: Text(
+                    "categories".tr(),
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -75,9 +76,9 @@ Dialog categoryDialog(BuildContext context) => Dialog(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SvgPicture.asset(AppStyle.instance.grayAddIconPath),
-                        const Text(
-                          "ADD",
-                          style: TextStyle(
+                        Text(
+                          "add".tr(),
+                          style: const TextStyle(
                             color: Color(0xFF747474),
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

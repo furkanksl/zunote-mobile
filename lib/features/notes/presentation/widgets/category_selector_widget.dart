@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
@@ -37,10 +38,10 @@ class CategorySelector extends StatelessWidget {
             const SizedBox(width: 15),
             SvgPicture.asset(AppStyle.instance.categoryBlackIconPath),
             const SizedBox(width: 20),
-            const Flexible(
+            Flexible(
               child: Text(
-                "All",
-                style: TextStyle(
+                "all".tr(),
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
