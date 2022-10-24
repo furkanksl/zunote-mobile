@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:simple_shadow/simple_shadow.dart';
@@ -78,7 +79,7 @@ class PlanCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "\$${plans[index]["price"]}/annual",
+                    "\$${plans[index]["price"]}/" + "annual".tr(),
                     style: const TextStyle(
                       fontWeight: FontWeight.w300,
                       fontSize: 20,

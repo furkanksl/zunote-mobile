@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
@@ -21,14 +22,14 @@ class AuthToggleContainer extends ConsumerWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           AuthToggleButton(
             index: 0,
-            buttonName: "LOGIN",
+            buttonName: "login".tr(),
           ),
           AuthToggleButton(
             index: 1,
-            buttonName: "SIGNUP",
+            buttonName: "signup".tr(),
           ),
         ],
       ),

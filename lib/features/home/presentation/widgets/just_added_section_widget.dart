@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:zunote/core/const/app_styles.dart';
@@ -20,7 +21,7 @@ class JustAddedSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               boxShadow: AppStyle.instance.boxShadow,
             ),
-            child: const Text("JUST ADDED"),
+            child: const Text("just-added").tr(),
           ),
           Expanded(
             child: ListView.builder(

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:simple_shadow/simple_shadow.dart';
@@ -77,7 +78,7 @@ class _NavBarState extends State<NavBar> {
                           width: 30,
                         ),
                         const SizedBox(width: 10),
-                        const Text("Settings"),
+                        Text("settings".tr()),
                       ],
                     ),
                   ),
@@ -95,7 +96,7 @@ class _NavBarState extends State<NavBar> {
                           width: 30,
                         ),
                         const SizedBox(width: 10),
-                        const Text("About"),
+                        Text("about".tr()),
                       ],
                     ),
                   ),
@@ -113,7 +114,7 @@ class _NavBarState extends State<NavBar> {
                           width: 30,
                         ),
                         const SizedBox(width: 10),
-                        const Text("Logout"),
+                        Text("logout".tr()),
                       ],
                     ),
                   ),
