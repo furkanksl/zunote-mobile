@@ -20,7 +20,7 @@ class NotesScreen extends StatelessWidget {
             SizedBox(height: 2.h),
             const CategorySelector(),
             SizedBox(height: 2.h),
-            const NotesList(),
+            NotesList(),
           ],
         ),
       ),
