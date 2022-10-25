@@ -79,7 +79,7 @@ class PlanCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "\$${plans[index]["price"]}/" + "annual".tr(),
+                    "\$${plans[index]["price"]}/${"annual".tr()}",
                     style: const TextStyle(
                       fontWeight: FontWeight.w300,
                       fontSize: 20,

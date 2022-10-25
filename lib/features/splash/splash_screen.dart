@@ -6,7 +6,6 @@ import 'package:simple_shadow/simple_shadow.dart';
 
 import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/features/auth/presentation/auth_screen.dart';
-import 'package:zunote/features/home/presentation/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -25,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           fullscreenDialog: true,
-          builder: (context) => AuthScreen(),
+          builder: (context) => const AuthScreen(),
         ),
       ),
     );
