@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 import 'package:zunote/core/presentation/widgets/widget_shadower_widget.dart';
-import 'package:zunote/features/auth/presentation/state/auth_state.dart';
+import 'package:zunote/features/notes/presentation/state/notes_provider.dart';
 
 class NotesToggleButton extends ConsumerWidget {
   const NotesToggleButton({
@@ -19,8 +19,8 @@ class NotesToggleButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final toggleIndex = ref.watch(authPageProvider).toggleIndex;
-    void setToggle(int idx) => ref.read(authPageProvider.notifier).setToggleIndex(idx);
+    final toggleIndex = ref.watch(notesPageProvider).toggleIndex;
+    void setToggle(int idx) => ref.read(notesPageProvider.notifier).setToggleIndex(idx);
 
     return Expanded(
       child: Material(
