@@ -87,11 +87,10 @@ Dialog addCategoryDialog(BuildContext context) => Dialog(
                     ),
                     child: Text(
                       "add".tr(),
-                      style: const TextStyle(
-                        color: Color(0xFF747474),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ),
                 ),
