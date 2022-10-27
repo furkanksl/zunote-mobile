@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
 
 import 'package:zunote/core/const/app_styles.dart';
-import 'package:zunote/features/auth/presentation/state/auth_state.dart';
+import 'package:zunote/features/auth/presentation/state/auth_provider.dart';
 import 'package:zunote/features/auth/presentation/widgets/continue_button_widget.dart';
 import 'package:zunote/features/auth/presentation/widgets/input_field_widget.dart';
 
