@@ -23,6 +23,11 @@ class AppTheme {
     scaffoldBackgroundColor: const Color(0xFF6D6D6E),
     cardColor: const Color(0xFF979797),
     canvasColor: const Color(0xFFADAAAA),
+    textTheme: const TextTheme(
+      bodyText1: TextStyle(
+        color: Color(0xFF979797),
+      ),
+    ),
   );
 
   static final customTheme2 = defaultTheme.copyWith(
