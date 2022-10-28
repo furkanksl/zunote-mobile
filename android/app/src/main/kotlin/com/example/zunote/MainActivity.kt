@@ -1,4 +1,4 @@
-package com.example.zunote
+package com.zunote.io
 
 import io.flutter.embedding.android.FlutterActivity
 
