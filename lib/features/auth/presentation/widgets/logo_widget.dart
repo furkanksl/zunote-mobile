@@ -13,6 +13,7 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 70.w,
+      height: 20.h,
       constraints: const BoxConstraints(maxWidth: 500),
       child: SimpleShadow(
         child: SvgPicture.asset(AppStyle.instance.logoPath),

@@ -12,6 +12,7 @@ class AuthToggleContainer extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: 80.w,
+      height: 57,
       margin: const EdgeInsets.symmetric(horizontal: 20),
       constraints: const BoxConstraints(maxWidth: 300),
       padding: const EdgeInsets.all(5),

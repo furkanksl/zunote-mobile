@@ -24,7 +24,6 @@ class AuthToggleButton extends ConsumerWidget {
         child: InkWell(
           onTap: () => setToggle(index),
           child: Container(
-            height: 5.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: toggleIndex == index ? const Color(0xFFA0A0A0) : Colors.transparent,
