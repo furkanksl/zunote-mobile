@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
@@ -7,10 +8,14 @@ import 'package:zunote/core/data/service/app_local_service.dart';
 import 'package:zunote/core/theme/app_theme.dart';
 import 'package:zunote/core/theme/state/theme_provider.dart';
 import 'package:zunote/features/splash/splash_screen.dart';
+import 'package:zunote/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   final appLocalService = AppLocalService();
   final int themeIndex = await appLocalService.getThemeIndex();
