@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
 
+import 'package:zunote/core/const/app_locales.dart';
 import 'package:zunote/core/data/service/app_local_service.dart';
 import 'package:zunote/core/theme/app_theme.dart';
 import 'package:zunote/core/theme/state/theme_provider.dart';
@@ -12,10 +13,9 @@ import 'package:zunote/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await EasyLocalization.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   final appLocalService = AppLocalService();
   final int themeIndex = await appLocalService.getThemeIndex();
@@ -23,17 +23,10 @@ void main() async {
   runApp(
     ProviderScope(
       child: EasyLocalization(
-        supportedLocales: const [
-          Locale('en', 'US'),
-          Locale('tr', 'TR'),
-          Locale('de', 'DE'),
-          Locale('ar', 'AE'),
-        ],
+        supportedLocales: appLocales,
         path: 'assets/translations',
-        fallbackLocale: const Locale('en', 'US'),
-        child: MyApp(
-          themeIndex: themeIndex,
-        ),
+        fallbackLocale: appLocales[0],
+        child: MyApp(themeIndex: themeIndex),
       ),
     ),
   );
