@@ -17,7 +17,6 @@ class AuthForm extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final authProvider = ref.watch(authPageProvider);
     final toggleIndex = authProvider.toggleIndex;
-    // final toggleIndex = ref.watch(AuthProvider.instance.toggleIndex.state).state;
 
     return Container(
       width: 90.w,
