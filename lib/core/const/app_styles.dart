@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppStyle {
   AppStyle._privateConstructor();
+
   static final AppStyle _instance = AppStyle._privateConstructor();
+
   static AppStyle get instance => _instance;
 
   // Asset consts
@@ -28,7 +30,6 @@ class AppStyle {
 
   final grayAddIconPath = 'assets/icons/gray_add.svg';
   final removeIconPath = 'assets/icons/remove.svg';
-
   final homeIconPath = 'assets/icons/home.svg';
   final grayHomeIconPath = 'assets/icons/home_gray.svg';
   final notesIconPath = 'assets/icons/notes.svg';
@@ -46,6 +47,7 @@ class AppStyle {
   final miniPauseIconPath = 'assets/icons/mini_pause.svg';
   final trashIconPath = 'assets/icons/trash.svg';
   final settingsIconPath = 'assets/icons/settings.svg';
+
   final turkishIconPath = 'assets/icons/turkish.svg';
   final englishIconPath = 'assets/icons/english.svg';
   final arabicIconPath = 'assets/icons/arabic.svg';

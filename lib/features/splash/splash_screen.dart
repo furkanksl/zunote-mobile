@@ -1,37 +1,37 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
 import 'package:zunote/core/const/app_styles.dart';
+import 'package:zunote/core/data/service/utility_service.dart';
 import 'package:zunote/features/auth/presentation/auth_screen.dart';
+import 'package:zunote/features/auth/presentation/state/auth_provider.dart';
+import 'package:zunote/features/home/presentation/home_screen.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(
-      const Duration(milliseconds: 1050),
-      () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          fullscreenDialog: true,
-          builder: (context) => const AuthScreen(),
-        ),
-      ),
-    );
-  }
+class _SplashScreenState extends ConsumerState<SplashScreen> {
+  final UtilityService utilityService = UtilityService();
 
   @override
   Widget build(BuildContext context) {
+    final authState = ref.watch(authStateProvider);
+
+    Future.delayed(const Duration(milliseconds: 1050), () {
+      authState.whenData(
+        (value) => value != null
+            ? utilityService.navigateTo(context, HomeScreen())
+            : utilityService.navigateTo(context, const AuthScreen()),
+      );
+    });
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SizedBox(

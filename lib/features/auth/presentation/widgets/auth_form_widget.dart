@@ -17,7 +17,6 @@ class AuthForm extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final authProvider = ref.watch(authPageProvider);
     final toggleIndex = authProvider.toggleIndex;
-    // final toggleIndex = ref.watch(AuthProvider.instance.toggleIndex.state).state;
 
     return Container(
       width: 90.w,
@@ -45,6 +44,9 @@ class AuthForm extends ConsumerWidget {
           SizedBox(height: 3.h),
           Visibility(
             visible: toggleIndex == 1,
+            maintainAnimation: true,
+            maintainSize: true,
+            maintainState: true,
             child: InputField(
               controller: TextEditingController(text: authProvider.passwordAgain),
               isObscureText: true,
@@ -53,10 +55,6 @@ class AuthForm extends ConsumerWidget {
               inputType: TextInputType.text,
               onChange: (String value) => ref.read(authPageProvider.notifier).setPasswordAgain(value),
             ),
-          ),
-          Visibility(
-            visible: toggleIndex == 0,
-            child: SizedBox(height: 7.h),
           ),
           SizedBox(height: 4.h),
           const ContinueButton(),

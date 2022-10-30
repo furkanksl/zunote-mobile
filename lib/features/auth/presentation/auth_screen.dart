@@ -20,19 +20,21 @@ class _AuthScreenState extends State<AuthScreen> {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Logo(),
-              const AuthToggleContainer(),
-              SizedBox(height: 8.h),
-              const AuthForm(),
-              SizedBox(height: 3.h),
-              const Text("Or"),
-              SizedBox(height: 3.h),
-              const AuthOptions()
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Logo(),
+                const AuthToggleContainer(),
+                SizedBox(height: 8.h),
+                const AuthForm(),
+                SizedBox(height: 3.h),
+                const Text("Or"),
+                SizedBox(height: 3.h),
+                const AuthOptions()
+              ],
+            ),
           ),
         ),
       ),

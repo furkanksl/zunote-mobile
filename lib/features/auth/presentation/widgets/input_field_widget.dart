@@ -34,16 +34,18 @@ class InputField extends StatelessWidget {
       child: TextField(
         onChanged: (value) => onChange(value),
         controller: controller,
-        style: const TextStyle(fontSize: 16),
+        style: const TextStyle(
+          fontSize: 16,
+          color: Colors.black,
+        ),
         cursorColor: Colors.black,
-        cursorHeight: 16,
         cursorRadius: const Radius.circular(20),
         keyboardType: inputType,
         maxLines: 1,
         obscureText: isObscureText,
         decoration: InputDecoration(
           border: InputBorder.none,
-          contentPadding: const EdgeInsets.all(20),
+          contentPadding: const EdgeInsets.all(15),
           hintText: hintText,
           hintStyle: const TextStyle(
             fontWeight: FontWeight.w200,
