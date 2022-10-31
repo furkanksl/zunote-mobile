@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:zunote/core/data/error_codes.dart';
 
 class UtilityService {
@@ -29,5 +30,22 @@ class UtilityService {
     });
 
     return errorValue;
+  }
+
+  LocaleType getCurrentLocaleType(BuildContext context) {
+    Locale currentLocale = Localizations.localeOf(context);
+
+    switch (currentLocale.languageCode) {
+      case 'en':
+        return LocaleType.en;
+      case 'tr':
+        return LocaleType.tr;
+      case 'de':
+        return LocaleType.de;
+      case 'ar':
+        return LocaleType.ar;
+      default:
+        return LocaleType.en;
+    }
   }
 }
