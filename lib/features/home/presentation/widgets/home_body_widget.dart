@@ -23,7 +23,7 @@ class HomeBody extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               const JustAddedSection(),
-              const DetailsSection(),
+              DetailsSection(),
               SizedBox(height: 1.5.h),
               const NoteInputField(),
               SizedBox(height: 1.5.h),
