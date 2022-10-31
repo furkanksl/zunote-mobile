@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sizer/sizer.dart';
 import 'package:zunote/features/auth/presentation/state/auth_provider.dart';
 
 class AuthToggleButton extends ConsumerWidget {
