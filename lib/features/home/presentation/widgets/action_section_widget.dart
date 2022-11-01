@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zunote/core/const/app_styles.dart';
-import 'package:zunote/features/home/presentation/widgets/circle_button_widget.dart';
+import 'package:zunote/features/home/presentation/widgets/squared_button_widget.dart';
 
 class ActionSection extends StatelessWidget {
   const ActionSection({
@@ -15,7 +15,7 @@ class ActionSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          CircleButton(
+          SquaredButton(
             size: const Size(65, 65),
             svgPath: AppStyle.instance.microphoneIconPath,
             onClick: () {},
@@ -27,7 +27,7 @@ class ActionSection extends StatelessWidget {
               height: 65,
             ),
           ),
-          CircleButton(
+          SquaredButton(
             size: const Size(65, 65),
             svgPath: AppStyle.instance.addIconPath,
             onClick: () {},
