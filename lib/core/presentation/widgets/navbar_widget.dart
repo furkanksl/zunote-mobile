@@ -40,7 +40,7 @@ class _NavBarState extends ConsumerState<NavBar> {
     final _authRepositoryProvider = ref.read(authRepositoryProvider);
 
     return AppBar(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: Colors.transparent, //Theme.of(context).scaffoldBackgroundColor,
       elevation: 0,
       titleSpacing: 0,
       leadingWidth: 130,
