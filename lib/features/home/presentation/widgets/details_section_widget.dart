@@ -6,7 +6,7 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:zunote/core/const/app_styles.dart';
 import 'package:zunote/core/data/service/utility_service.dart';
 import 'package:zunote/core/presentation/dialogs/category_dialog.dart';
-import 'package:zunote/features/home/presentation/widgets/circle_button_widget.dart';
+import 'package:zunote/features/home/presentation/widgets/squared_button_widget.dart';
 
 class DetailsSection extends StatelessWidget {
   DetailsSection({
@@ -27,12 +27,12 @@ class DetailsSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          CircleButton(
+          SquaredButton(
             size: const Size(40, 40),
             svgPath: AppStyle.instance.categoryIconPath,
             onClick: () => showCategoryDialog(context),
           ),
-          CircleButton(
+          SquaredButton(
             size: const Size(40, 40),
             svgPath: AppStyle.instance.reminderIconPath,
             onClick: () {

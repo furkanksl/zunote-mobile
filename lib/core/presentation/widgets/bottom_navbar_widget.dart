@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, use_function_type_syntax_for_parameters
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,44 +16,86 @@ class BottomNavBar extends ConsumerWidget {
     setIndex(int index) => ref.read(homePageProvider.notifier).setNavIndex(index);
 
     return Container(
-      height: 85,
+      height: 150,
       width: 100.w,
       margin: const EdgeInsets.only(top: 20),
-      decoration: BoxDecoration(
-        boxShadow: const [
-          BoxShadow(
-            offset: Offset(3, -4),
-            blurRadius: 4,
-            spreadRadius: 0,
-            color: Colors.black26,
-          ),
-        ],
-        color: Theme.of(context).scaffoldBackgroundColor,
-        borderRadius: const BorderRadius.horizontal(
-          left: Radius.circular(15),
-          right: Radius.circular(15),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          BottomNavBarButton(
-            iconPath: AppStyle.instance.subscriptionIconPath,
-            isSelected: navIndex == 0,
-            onClick: () => setIndex(0),
-          ),
-          BottomNavBarButton(
-            iconPath: AppStyle.instance.homeIconPath,
-            isSelected: navIndex == 1,
-            onClick: () => setIndex(1),
-          ),
-          BottomNavBarButton(
-            iconPath: AppStyle.instance.notesIconPath,
-            isSelected: navIndex == 2,
-            onClick: () => setIndex(2),
-          ),
-        ],
+      color: Colors.transparent,
+      child: Stack(
+        alignment: Alignment.center,
+        children: orderedMenuItems(context, navIndex, setIndex),
       ),
     );
+  }
+
+  List<Widget> orderedMenuItems(
+    BuildContext context,
+    int? navIndex,
+    void setIndex(int index),
+  ) {
+    List<Widget> orderedMenu = [
+      Positioned(
+        left: 50,
+        right: 50,
+        top: 110,
+        child: Container(
+          width: 100.w,
+          height: 100.w,
+          decoration: BoxDecoration(
+            color: Theme.of(context).scaffoldBackgroundColor,
+            borderRadius: BorderRadius.circular(100.w),
+          ),
+        ),
+      ),
+      Positioned(
+        right: 50.w + 50,
+        child: BottomNavBarButton(
+          iconPath: AppStyle.instance.subscriptionIconPath,
+          isSelected: navIndex == 0,
+          angle: -0.5,
+          margin: 0,
+          onClick: () => setIndex(0),
+        ),
+      ),
+      Positioned(
+        left: 50.w + 50,
+        child: BottomNavBarButton(
+          iconPath: AppStyle.instance.notesIconPath,
+          isSelected: navIndex == 2,
+          angle: 0.5,
+          margin: 0,
+          onClick: () => setIndex(2),
+        ),
+      ),
+      Positioned(
+        right: 50.w - 50,
+        // left: 50.w,
+        width: 100,
+        child: BottomNavBarButton(
+          iconPath: AppStyle.instance.homeIconPath,
+          isSelected: navIndex == 1,
+          angle: 0,
+          margin: 50,
+          onClick: () => setIndex(1),
+        ),
+      ),
+    ];
+
+    if (navIndex == 2) {
+      return [
+        orderedMenu[0],
+        orderedMenu[1],
+        orderedMenu[3],
+        orderedMenu[2],
+      ];
+    } else if (navIndex == 0) {
+      return [
+        orderedMenu[0],
+        orderedMenu[2],
+        orderedMenu[3],
+        orderedMenu[1],
+      ];
+    }
+
+    return orderedMenu;
   }
 }
